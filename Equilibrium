@@ -1,0 +1,47 @@
+public class Solution {
+    public int solve(int[] A) {
+        int n=A.length;
+        for (int i=0;i<n;i++){
+            int L=0;
+            int R=0;
+            if(i==0){
+
+                for(int j=1;j<n;j++){
+                    R=R+A[j];
+                }
+                if(R==A[i]){
+                    return i;
+                }
+            }
+            else if(i==n-1){
+                for(int k=n-2;k>=0;k++){
+                    L=L+A[k];
+                }
+                if(A[i]==L){
+                    return i;
+                }
+            }
+
+            else{
+                for(int l=i-1;l>=0;l--){
+                    L=L+A[l];
+                }
+                for(int r=i+1;r<n;r++){
+                    R=R+A[r];
+                }
+            
+                if(L==R){
+                    return i;
+                }
+            }
+
+
+
+        }
+
+return -1;
+
+
+
+    }
+}
