@@ -1,0 +1,19 @@
+public class Solution {
+    public int[] solve(int[] A) {
+        int rightmax=Integer.MIN_VALUE;
+        ArrayList<Integer> al = new ArrayList<>();
+        for(int i=A.length-1;i>=0;i--){
+            if(A[i]>rightmax){
+                rightmax=A[i];
+                al.add(A[i]);
+            }
+        }
+return al;
+
+
+        
+
+
+
+    }
+}
