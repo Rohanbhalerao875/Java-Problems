@@ -1,0 +1,25 @@
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int n=nums.length;
+        int [] arr =new int [n];
+        int maxendinghere=0;
+        int maxsofar=Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            maxendinghere=maxendinghere+nums[i];
+          
+            if(maxendinghere>maxsofar){
+                maxsofar=maxendinghere;
+            }
+            
+            
+            if(maxendinghere<0){
+                maxendinghere=0;
+            }
+
+            
+            
+        }
+        return maxsofar;
+        
+    }
+}
