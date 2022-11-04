@@ -1,0 +1,16 @@
+class Solution {
+    public int[][] transpose(int[][] matrix) {
+       int A=matrix[0].length;
+        int B=matrix.length;
+        
+       int[][] brr = new int[A][B];
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                brr[j][i]=matrix[i][j];
+                
+            }
+            
+        }
+        return brr;
+    }
+}
