@@ -1,0 +1,32 @@
+
+
+//User function Template for Java
+
+
+class Solution
+{
+    static int smallestSumSubarray(int a[], int size)
+    {
+        int curr_sum=0;
+        int res_sum=Integer.MAX_VALUE;
+        int n=a.length;
+        
+        for(int i=0;i<n;i++){
+            curr_sum=curr_sum+a[i];
+            if(curr_sum<res_sum){
+                res_sum=curr_sum;
+                
+            }
+            if(curr_sum>0){
+                curr_sum=0;
+            }
+            
+        }
+        
+        
+        return res_sum;
+        
+        
+        
+    }
+}
