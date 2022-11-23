@@ -1,0 +1,25 @@
+
+
+//User function Template for Java
+
+class Solution {
+    int rowWithMax1s(int arr[][], int n, int m) {
+        
+        
+        int r=0;
+        int c=m-1;
+        int ans=-1;
+        while(r<n && c>=0){
+            if(arr[r][c]==1){
+                ans=r;
+                c--;
+            }
+            else{
+                r++;
+            }
+        }
+        return ans;
+        
+        
+    }
+}
