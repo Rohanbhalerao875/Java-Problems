@@ -1,0 +1,30 @@
+
+import static java.lang.System.in;
+
+class Prime{
+    public void checkPrime(int... A){
+        for(int i=0;i<A.length;i++){
+            if(IsPrime(A[i])){
+                
+                System.out.print(A[i]+" ");
+               
+            }
+
+        }
+               System.out.println();          
+        
+    }
+    Boolean IsPrime (int a){
+            if(a==1){return false;}
+            if(a==2){return true;}
+            int root=(int) Math.sqrt(a);
+            for(int i=2;i<=root;i++){
+                if(a%i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+}
+
+
