@@ -1,0 +1,18 @@
+public class Solution {
+    public long subarraySum(int[] A) {
+        int n=A.length;
+        long sum=0;
+        for(int i=0;i<n;i++){
+            int s=i+1;
+            int e=n-i;
+            sum+=(long)s*e*A[i];
+        }
+
+
+
+
+return sum;
+
+
+    }
+}
