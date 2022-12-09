@@ -1,0 +1,40 @@
+public class Solution {
+    public int solve(int[] A) {
+        int min =Integer.MAX_VALUE;
+        int max =Integer.MIN_VALUE;
+        int n=A.length;
+        for(int i=0;i<n;i++){
+            if(A[i]<=min){
+                min = A[i];
+            }
+            if(A[i]>=max){
+                max=A[i];
+            }
+        }
+        if(min==max){
+            return 1;
+        }
+        int minindex=-1;
+        int maxindex=-1;
+        int mincount=Integer.MAX_VALUE;
+        for (int i=0;i<n;i++){
+            int count =-1;
+            if(A[i]==min){
+                minindex=i;
+            }
+            if(A[i]==max){
+                maxindex=i;
+            }
+            if(maxindex!=-1 && minindex!=-1){
+                count = Math.abs(maxindex-minindex);
+                if(count <= mincount){
+                    mincount = count;
+                }
+            }
+        }
+
+return mincount+1;
+
+
+    }
+}
