@@ -1,0 +1,24 @@
+public class Solution {
+    public int solve(String A) {
+        int s=0;
+        int e=A.length()-1;
+        return helper(A,s,e);
+
+
+
+    }
+    public int helper(String A,int s, int e){
+        if(s>=e){
+            return 1;
+        }
+        if(A.charAt(s)!=A.charAt(e)){
+            return 0;
+        }
+        else{
+        return helper(A,s+1,e-1);
+        }
+
+
+        
+    }
+}
