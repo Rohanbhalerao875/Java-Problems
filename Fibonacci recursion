@@ -1,0 +1,14 @@
+public class Solution {
+    public int findAthFibonacci(int A) {
+        int n=A;
+        if(n==0){return 0;}
+        if(n==1){
+            return 1;
+        }
+        else{return findAthFibonacci(n-1)+findAthFibonacci(n-2);}
+
+
+
+
+    }
+}
