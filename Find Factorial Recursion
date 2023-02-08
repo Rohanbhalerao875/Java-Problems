@@ -1,0 +1,10 @@
+public class Solution {
+    public int solve(int A) {
+        int n=A;
+        
+        if(n==1 || n==0){
+            return 1;
+        }
+    else{return n*solve(n-1);}
+    }
+}
