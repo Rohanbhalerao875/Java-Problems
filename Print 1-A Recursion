@@ -1,0 +1,19 @@
+public class Solution {
+    public void solve(int A) {
+    helper(A);
+            System.out.print("\n");
+    
+    
+    }
+    public void helper(int n){
+        if(n==0){
+            return;
+        }
+        else{
+            helper(n-1);
+            System.out.print(n+" ");
+        }
+
+    }
+}
+
