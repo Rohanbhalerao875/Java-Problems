@@ -1,0 +1,24 @@
+public class Solution {
+    public int[] solve(int A, int[][] B) {
+        int [] arr = new int [A];
+        
+        for(int i=0;i<B.length;i++){
+            int x = B[i][0]-1;
+            int y = B[i][1]-1;
+            int p = B[i][2];
+             
+             arr[x]=arr[x]+p;
+             if(y+1<A){
+                 arr[y+1]=arr[y+1]-p;
+             }
+
+
+        }
+
+        for(int i=1;i<arr.length;i++){
+            arr[i]=arr[i-1]+arr[i];
+        }
+return arr;
+
+    }
+}
