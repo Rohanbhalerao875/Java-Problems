@@ -1,0 +1,25 @@
+public class Solution {
+    public void solve(int A) {
+    if(A==1){
+        System.out.print(1);
+        
+    }
+    else{
+
+    
+    helper(A);
+     System.out.print("\n");
+
+}
+    }
+    public void helper(int n){
+        
+            if(n==0){return;}
+        
+            System.out.print(n+" ");
+            helper(n-1);
+            
+            
+        
+    }
+}
