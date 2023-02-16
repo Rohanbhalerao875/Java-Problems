@@ -1,0 +1,47 @@
+public class Solution {
+    public int solve(int A, int B) {
+        int C = 1000000007;
+        int factorial = fact (B , C);
+        int result = pow(A,factorial,C);
+        return result;
+
+ 
+
+
+
+
+
+    }
+    public int pow(int A, int B , int C){
+    if(A == 0){return 0;}
+    if(B == 0){return 1;}
+    long he = pow ( A , B/2 , C);
+    long ha = (he % C * he % C) % C;
+    if(B % 2 == 0){
+        return (int) (ha + C) % C;
+    }
+    else{
+        return (int) ((ha % C * A % C) % C + C) % C;
+    }
+
+    }
+
+       public int fact(int B, int C){
+        if (B==1){
+            return 1; 
+        }
+        long ans = 1;
+        C=C-1;
+            for(int i = 2 ; i <= B ; i++){
+                
+                ans = (ans * i ) % C;
+            }
+
+             
+            
+        return (int) ans;
+    }
+
+
+
+}
