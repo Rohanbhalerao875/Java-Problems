@@ -1,0 +1,30 @@
+public class Solution {
+    public int solve(ArrayList<Integer> A) {
+        if(A.size()==2){
+            return solve(A.get(0),A.get(1));
+        }
+    
+
+        for(int i=0;i<A.size()-1;i++){
+            int temp = solve(A.get(i) , A.get(i+1));
+            A.set(i+1 , temp);
+        }
+        return A.get(A.size()-1);
+
+
+
+
+    }
+    public int solve(int A , int B){
+        if(A==0){return B;}
+        if(B==0){return A;}
+
+        if(B>A){
+            int temp=A;
+            A=B;
+            B=temp;
+        }
+        return solve(A % B , B);
+
+    }
+}
