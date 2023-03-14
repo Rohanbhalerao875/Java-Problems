@@ -1,0 +1,35 @@
+public class Solution {
+    public int solve(ArrayList<Integer> A) {
+
+        int ans = 0;
+        int n = A.size();
+        //1st and last elements cannot be the middle elements and we are checking the middle elements left and right to see if the middle element forms a triplet and this cover all the cases as in triplets there will be a middle element or there wouldnt be a triplet lol.
+        for(int i=1; i<n-1 ;i++){
+        int l = 0;
+        int r = 0;
+            for(int j=i-1; j>=0; j--){
+                if(A.get(j)<A.get(i)){
+                    l++;
+                }
+            }
+            for(int k=i+1; k<n; k++){
+                if(A.get(k)>A.get(i)){
+                    r++;
+                }
+            }
+
+            ans += l*r;
+        }
+
+
+
+
+
+return ans;
+
+
+
+
+
+    }
+}
