@@ -1,0 +1,32 @@
+public class Solution {
+    public int solve(int A) {
+        int maxpow = 1;
+        int killreq = 0;   
+        int ans = 0;
+
+        for(int i = 1; maxpow <= A; i++){
+            int curr = (int) Math.pow(2,i);
+            
+            if(curr > A){
+                break;
+            }
+            maxpow = curr;
+
+        }
+if(maxpow == A){
+    return 1;
+}
+
+else{
+    killreq = A-maxpow;
+    return ans = killreq * 2 + 1;
+}
+
+
+
+
+
+
+
+    }
+}
