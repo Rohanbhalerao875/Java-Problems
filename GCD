@@ -1,0 +1,24 @@
+public class Solution {
+    public int gcd(int A, int B) {
+        return solve(A,B);
+
+
+    }
+    public int solve(int A, int B){
+        if(A==0){
+            return B;
+        }
+        if(B==0){
+            return A;
+        }
+        if(B>A){
+            int temp = A;
+            A=B;
+            B=temp;
+        }
+        return solve(A % B , B);
+
+
+
+    }
+}
